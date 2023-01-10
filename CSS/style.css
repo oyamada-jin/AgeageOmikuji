@@ -78,7 +78,7 @@
     max-width: 390px;
     max-height: 844px;
     /* background:url('./../img/jari.jpg'); */
-    background-color: #f1c159;
+    background-image: url('./../img/wa.jpg');
 }
 
 .start_div {
@@ -98,7 +98,7 @@
 
 }
 .Age_span{
-    color: red;
+    color: aqua;
 }
 .torii_img {
     position: relative;
