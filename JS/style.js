@@ -17,5 +17,6 @@ function stop_button() {
     const StopButton = document.getElementById("button_stop");
     StartButton.style.display = 'block';
     StopButton.style.display = 'none';
+    location.href ='./jinbutu1-2.html';
 }
 

@@ -78,7 +78,7 @@
     max-width: 390px;
     max-height: 844px;
     /* background:url('./../img/jari.jpg'); */
-    background-image: url('./../img/wa.jpg');
+    background: url('./../img/wa.jpg');
 }
 
 .start_div {
@@ -99,7 +99,20 @@
 }
 .Age_span{
     color: aqua;
+    animation: move-y 0.5s infinite alternate ease-in-out;
+    display: inline-block;
 }
+
+@keyframes move-y {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-10px);
+    }
+  }
+
+
 .torii_img {
     position: relative;
     width: 45vh;
