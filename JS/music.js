@@ -1,4 +1,5 @@
-['少しくらいは不安だってばこれが私の生きる道',
+//歌詞のやつ
+var meigen_music = ['少しくらいは不安だってばこれが私の生きる道',
 '別れる理由3つあるなら別れない理由100探すから',
 '世界中に定められたどんな記念日なんかよりあなたが生きている今日はどんなに素晴らしいだろう',
 '人間なんて誰だってとてもふつうで出会いはどれだって特別だろう',
@@ -27,9 +28,12 @@
 '人はそれぞれ「正義」があって、争い合うのは仕方ないのかも知れないだけど僕の嫌いな彼も彼なりの理由があるとおもうんだ',
 '自分で自分を分類するなよ壊して見せろよそのBadHabit',
 '心は誰にも見えないのだから見えるものよりも大事にするといい',
-'僕らは日々をスクロールしてたまに自己嫌悪になるけどクヨクヨしても意味ないからあるだけの力振り絞ってギリギリ明日へとヘッドスライディング'];
-
-['PUFFY',
+'僕らは日々をスクロールしてたまに自己嫌悪になるけどクヨクヨしても意味ないからあるだけの力振り絞ってギリギリ明日へとヘッドスライディング'
+];
+var c  = Math.floor(Math.random() * meigen_music.length);
+var music = meigen_music[c];
+// 歌手たち
+var music_hito =['PUFFY',
 'RADWIMPS',
 'THE BLUE HEARTS',
 "B'z",
@@ -59,3 +63,29 @@
 'SEKAINOOWARI',
 'backnumber',
 "IDon'tLikeMondays"];
+var hito_3 = music_hito[c];
+//musicのやつ
+function start_button_3() {
+    const yurasu = document.getElementById('img_yureru');
+    if (yurasu.className == null || yurasu.className == "") {
+        yurasu.className = 'omikuji_img';
+    }
+    const StartButton = document.getElementById("button_start_3");
+    const StopButton = document.getElementById("button_stop_3");
+    StartButton.style.display = 'none';
+    StopButton.style.display = 'block';
+}
+
+function stop_button_3() {
+    const yurasu = document.getElementById('img_yureru');
+    yurasu.className = '';
+    const StartButton = document.getElementById("button_start_3");
+    const StopButton = document.getElementById("button_stop_3");
+    StartButton.style.display = 'block';
+    StopButton.style.display = 'none';
+    location.href ='./music1-2.html';
+}
+window.onload = function(){
+      document.getElementById('kekka').innerHTML = music;
+      document.getElementById('hito').innerHTML = hito_3;
+}
