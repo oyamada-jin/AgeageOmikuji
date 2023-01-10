@@ -1,39 +1,38 @@
 /* select.html のCSS始まり*/
-#body_select {
+/* #body_select {
     margin: 0;
     max-width: 390px;
     max-height: 844px;
-    /* background: url("./../img/jari.) repeat left top/124px; */
-}
+} */
 
-.div_A_1 {
+/* .div_A_1 {
     width: 390px;
     height: 280px;
     text-align: center;
     border-bottom: solid black;
-}
+} */
 
-.img_omikuji {
+/* .img_omikuji {
     margin: auto;
     width: 60%;
     height: 100%;
-}
+} */
 
 /* select.htmlのCSS終わり */
 
 /* human.html・anime.html・music.htmlのcss始まり*/
-#human_body {
+/* #human_body {
     max-width: 390px;
     max-height: 844px;
     background-color: white;
-}
+} */
 
-.omikuji_img {
+/* .omikuji_img {
     transform-origin: center bottom;
     animation: yureru 1.5s linear infinite;
-}
+} */
 
-@keyframes yureru {
+/* @keyframes yureru {
 
     0%,
     100% {
@@ -43,10 +42,10 @@
     50% {
         transform: rotate(-20deg);
     }
-}
+} */
 
 
-.button_style {
+/* .button_style {
     width: 100%;
     padding: 6%;
     margin: auto;
@@ -55,9 +54,9 @@
     font-size: 300%;
     background: linear-gradient(#F89174, #FFC778);
     color: black;
-}
+} */
 
-.button_style_1 {
+/* .button_style_1 {
     width: 100%;
     padding: 6%;
     margin: auto;
@@ -68,27 +67,26 @@
     display: none;
     background: linear-gradient(#06f, #08f, #0AF, #0CF);
     color: white;
-}
+} */
 
 /* human.html・anime.html・music.htmlのcss終わり*/
 
 /* start.htmlのcss始まり */
 #body_start {
     /* margin: 0; */
-    max-width: 390px;
-    max-height: 844px;
+    /* max-width: 390px;
+    max-height: 844px; */
     /* background:url('./../img/jari.jpg'); */
     background-image: url('./../img/wa.jpg');
+    background-repeat:no-repeat
 }
 
-.start_div {
+/* .start_div {
     max-width: 100%;
-    max-height: 100%;
-    /* background-color: #afa; */
-    
-}
+    max-height: 100%;    
+} */
 
-.text_style {
+/* .text_style {
     color: black;
     font-weight: 800;
     text-align: center;
@@ -96,27 +94,27 @@
     padding-top: 10%;
     margin: 0;
 
-}
-.Age_span{
+} */
+/* .Age_span{
     color: aqua;
-}
-.torii_img {
+} */
+/* .torii_img {
     position: relative;
     width: 45vh;
     height: 60vh;
     z-index: 2;
-}
+} */
 
-.got_img {
+/* .got_img {
     position: absolute;
     top: 40%;
     right: 17%;
     z-index: 1;
     transform-origin: center bottom;
     animation: got 2s linear infinite;
-}
+} */
 
-@keyframes got {
+/* @keyframes got {
 
     0%,
     100% {
@@ -126,9 +124,9 @@
     50% {
         transform: rotate(-10deg);
     }
-}
+} */
 
-.uranau_button {
+/* .uranau_button {
     width: 60%;
     padding: 5%;
     display: block;
@@ -138,9 +136,9 @@
     border-radius: 10px;
     border: solid 1px;
     background: linear-gradient(#a2f,#a5f,#a8f,#aaf);
-}
+} */
 
-.favorite_button {
+/* .favorite_button {
     width: 60%;
     padding: 5%;
     display: block;
@@ -149,6 +147,6 @@
     border: solid 1px;
     font-size: 130%;
     background: linear-gradient(#FFaaFF,#FFbbFF,#ffccff,#ffddff);
-}
+} */
 
 /* start.htmlのcss終わり */
