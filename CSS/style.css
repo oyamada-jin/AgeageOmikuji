@@ -78,6 +78,7 @@
     max-width: 390px;
     max-height: 844px;
     /* background:url('./../img/jari.jpg'); */
+    background-color: #f1c159;
 }
 
 .start_div {
@@ -88,13 +89,17 @@
 }
 
 .text_style {
+    color: black;
+    font-weight: 800;
     text-align: center;
     font-size: 180%;
     padding-top: 10%;
     margin: 0;
 
 }
-
+.Age_span{
+    color: red;
+}
 .torii_img {
     position: relative;
     width: 45vh;
