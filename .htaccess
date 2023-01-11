@@ -1,0 +1,5 @@
+# .htmlを.phpとして認識させる
+<FilesMatch "\.html$">
+  AddType application/x-httpd-php .html
+</FilesMatch>
+# ---
