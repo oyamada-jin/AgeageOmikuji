@@ -1,32 +1,45 @@
+<?php
+// データベースマネージャの読込
+require_once "./データベース関連/DBmanager.php";
+$db = new DBManager();
+?>
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>アニメ1-2</title>
-    <link rel="stylesheet" href="../css/jinbutu1-2.css">
+    <link rel="stylesheet" href="./css/jinbutu1-2.css">
     <script src="./JS/anime.js"></script>
 </head>
+
 <body>
-    <!-- <div class="wrap"> -->
-    <!-- <div class="box1"> -->
     <div class="box1">
         <p class="a1">あげあげみくじ</p>
     </div>
     <div class="box2">
-        <p class="a2" id ="hito"></p>
+        <p class="a2" id="hito"></p>
     </div>
     <div class="box3">
-        <div class="a3" id="kekka">
-
-        </div>
+        <div class="a3" id="kekka"></div>
     </div>
     <img src="./img/daruma1.png" class="a4">
-    </div>
-    </div>
     <a href="select.html">
         <button class="a5">戻る</button>
     </a>
+    <script>
+        const anime = JSON.parse('<?php echo $db -> anime(); ?>');
+        //   console.log(anime);
+        const anime_hito = anime['anime_name'];
+        const anime_meigen = anime['anime_meigen'];
+        // console.log(anime_hito , anime_meigen);
+        window.onload = function () {
+            document.getElementById('hito').innerHTML = anime_hito;
+            document.getElementById('kekka').innerHTML = anime_meigen;
+        }
+    </script>
 </body>
+
 </html>
