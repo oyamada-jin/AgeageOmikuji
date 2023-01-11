@@ -7,8 +7,6 @@ class DBManager{
     }
 
     public function human(){
-        $max = $this->connect()->prepare("SELECT COUNT(*) FROM human"); 
-        $max -> execute();
         $ps = $this -> connect() -> prepare("SELECT * FROM human WHERE human_id = ?");
         $ps ->  bindValue(1,mt_rand(1,40),PDO::PARAM_INT);
         $ps -> execute();
@@ -16,17 +14,15 @@ class DBManager{
     }
 
     public function anime(){
-        $max = $this->connect()->prepare("SELECT MAX(anime_id) FROM human"); 
         $ps = $this -> connect() -> prepare("SELECT * FROM anime WHERE anime_id = ?");
-        $ps =  bindValue(1,mt_rand(1,$max),PDO::PARAM_INT);
+        $ps ->  bindValue(1,mt_rand(1,35),PDO::PARAM_INT);
         $ps -> execute();
         return json_encode($ps->fetch());
     }
 
     public function music(){
-        $max = $this->connect()->prepare("SELECT MAX(music_id) FROM human"); 
         $ps = $this -> connect() -> prepare("SELECT * FROM music WHERE music_id = ?");
-        $ps =  bindValue(1,mt_rand(1,$max),PDO::PARAM_INT);
+        $ps ->  bindValue(1,mt_rand(1,30),PDO::PARAM_INT);
         $ps -> execute();
         return json_encode($ps->fetch());
     }
