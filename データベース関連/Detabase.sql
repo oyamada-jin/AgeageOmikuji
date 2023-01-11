@@ -21,6 +21,7 @@ CREATE TABLE music(
 );
 
 -- データベースを作成する
+
 -- phpMyAdmin SQL Dump
 -- version 5.1.3
 -- https://www.phpmyadmin.net/
