@@ -1,0 +1,62 @@
+.omikuji_img {
+    transform-origin: center bottom;
+    animation: yureru 2s linear infinite;
+}
+
+/* @keyframes yureru {
+
+    0% { transform:translateX(0) }
+    5% { transform:translateX(-15px) }
+    10% { transform:translateX(0) }
+    20% { transform:translateX(15px) }
+    25% { transform:translateX(0) }
+    30% { transform:translateX(-15px) }
+    50% { transform:translateX(0) }
+    100% { transform:translateX(15px) }
+  } */
+
+
+.button_style {
+    padding: 10%;
+    font-size: 200%;
+    width: 90%;
+    transition: all 0.6s ease; 
+    color: rgb(200, 200, 37);
+    border: solid white;
+    background-color: black;
+    border-radius: 10px;
+    margin: 7% 5%;
+}
+
+.button_style_1 {
+    padding: 10%;
+    font-size: 200%;
+    width: 90%;
+    color: black;
+    border: solid black;
+    border-width: 5px;
+    background-color: rgb(200, 200, 37);
+    border-radius: 10px;
+    margin: 7% 5%;
+    display: none;
+}
+body{
+    background-image:url(../img/wa.jpg);
+    background-repeat: no-repeat;
+    height: 99.9vh;
+    background-size: cover;
+}
+@keyframes yureru {
+
+    0% { transform:translateX(0) }
+    10% { transform:translateX(-15px) }
+    20% { transform:translateX(0) }
+    30% { transform:translateX(-15px) }
+    40% { transform:translateX(0) }
+    50% { transform:translateX(-15px) }
+    60% { transform:translateX(0) }
+    70% { transform:translateX(-15px) }
+    80% { transform:translateX(0px) }
+    90% { transform:translateX(-15px) }
+    100% { transform:translateX(0px) }
+  }
