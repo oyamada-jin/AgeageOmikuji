@@ -1,0 +1,26 @@
+.c1 {
+    text-align: center;
+    border-bottom: solid black;
+    border-width: 10px;
+    background-image: url('../img/wa.jpg');
+}
+.c5{
+    text-align: center;
+    background-image: url('../img/wa.jpg');
+}
+.c4{
+    text-align: center;
+    border-top: solid black;
+    background-image: url('../img/wa.jpg');
+}
+.c2 {
+ width: 50vw;
+ height: 30.9vh;
+}
+.c3{
+ width: 40vw;
+ height: 31vh;
+}
+body{
+    background-color: black;
+}
