@@ -1,24 +1,29 @@
+<?php
+// データベースマネージャの読込
+require_once "./データベース関連/DBmanager.php";
+$db = new DBManager();
+?>
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>歌詞1-2</title>
-    <link rel="stylesheet" href="../css/jinbutu1-2.css">
+    <link rel="stylesheet" href="./css/jinbutu1-2.css">
     <script src="./JS/music.js"></script>
 </head>
+
 <body>
     <div class="box1">
         <p class="a1">あげあげみくじ</p>
     </div>
     <div class="box2">
-        <p class="a2" id ="hito"></p>
+        <p class="a2" id="hito"></p>
     </div>
     <div class="box3">
-        <div class="a3" id="kekka">
-
-        </div>
+        <div class="a3" id="kekka"></div>
     </div>
     <a href="select2.html">
     <img src="./img/daruma1.png" class="a4">
@@ -27,5 +32,17 @@
     </div>
     </div>
         <!-- <button class="a5">戻る</button> -->
+    <script>
+        const music = JSON.parse('<?php echo $db -> music(); ?>');
+        // console.log(music);
+        const music_name = music['music_name'];
+        const music_meigen = music['music_meigen'];
+        // console.log(music_name , music_meigen);
+        window.onload = function(){
+            document.getElementById('hito').innerHTML = music_name;
+            document.getElementById('kekka').innerHTML = music_meigen;
+        }
+    </script>
 </body>
+
 </html>

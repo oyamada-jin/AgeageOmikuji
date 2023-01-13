@@ -1,25 +1,30 @@
+<?php
+// データベースマネージャの読込
+require_once "./データベース関連/DBmanager.php";
+$db = new DBManager();
+?>
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>人物1-2</title>
-    <link rel="stylesheet" href="../css/jinbutu1-2.css">
+    <link rel="stylesheet" href="./css/jinbutu1-2.css">
     <script src="./JS/script.js"></script>
 </head>
+
 <body>
-    <!-- <div class="wrap"> -->
-    <!-- <div class="box1"> -->
     <div class="box1">
         <p class="a1">あげあげみくじ</p>
     </div>
     <div class="box2">
-        <p class="a2" id ="hito"></p>
+        <p class="a2" id="hito"></p>
     </div>
     <div class="box3">
         <div class="a3" id="kekka">
-     </div>
+        </div>
     </div>
     <a href="select2.html">
     <img src="./img/daruma1.png" class="a4">
@@ -28,5 +33,17 @@
     </div>
     </div>
         <!-- <button class="a5">戻る</button> -->
+    <script>
+        const hito = JSON.parse('<?php echo $db -> human(); ?>');
+        // console.log(hito);
+        const name = hito['human_name'];
+        const meigen = hito['human_meigen'];
+        //  console.log(name,meigen);
+        window.onload = function () {
+            document.getElementById('kekka').innerHTML = meigen;
+            document.getElementById('hito').innerHTML = name;
+        }
+    </script>
 </body>
+
 </html>
