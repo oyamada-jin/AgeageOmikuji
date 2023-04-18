@@ -7,8 +7,10 @@ class DBManager{
     }
 
     public function human(){
+        $max = $this -> connect() -> prepare("SELECT COUNT(*) FROM human");
+        $max -> execute();
         $ps = $this -> connect() -> prepare("SELECT * FROM human WHERE human_id = ?");
-        $ps ->  bindValue(1,mt_rand(1,40),PDO::PARAM_INT);
+        $ps ->  bindValue(1,mt_rand(1,(int)$max),PDO::PARAM_INT);
         $ps -> execute();
         return json_encode($ps->fetch());
     }
